@@ -61,3 +61,68 @@ for(let i=0;i<arr.length;i++){
   
 }
 console.log(arr1)
+
+
+
+
+
+//Find common value in array
+function commonValue(ar1, ar2, ar3, n1, n2, n3)
+{
+  var i = 0,
+    j = 0,
+    k = 0;
+
+  while (i < n1 && j < n2 && k < n3)
+  {
+    if (ar1[i] == ar2[j] && ar2[j] == ar3[k])
+    {
+    console.log(ar1[i] + " ")
+      i++;
+      j++;
+      k++;
+    }
+    else if (ar1[i] < ar2[j]) i++;
+    else if (ar2[j] < ar3[k]) j++;
+    else k++;
+  }
+}
+
+var ar1 = [1, 5, 10, 20, 40, 80];
+var ar2 = [6, 7, 20, 80, 100];
+var ar3 = [3, 4, 15, 20, 30, 70, 80, 120];
+var n1 = ar1.length;
+var n2 = ar2.length;
+var n3 = ar3.length;
+
+console.log("Common Elements are ");
+commonValue(ar1, ar2, ar3, n1, n2, n3); 
+
+
+
+//Sort an Array using the Quicksort
+function quickSort(originalArr) {
+if (originalArr.length <= 1) {
+   return originalArr;
+   } else {
+         var leftArr = [];              
+         var rightArr = [];
+         var newArr = [];
+         var pivot = originalArr.pop();      
+         var length = originalArr.length;
+         for (var i = 0; i < length; i++) {
+            if (originalArr[i] <= pivot) {    
+               leftArr.push(originalArr[i]);      
+         } else {
+                 rightArr.push(originalArr[i]);
+       }
+     }
+   return newArr.concat(quickSort(leftArr), pivot, quickSort(rightArr)); 
+}
+}
+var myArray = [9, 0, 2, 7, -2, 6, 1 ];
+console.log("Original array: " + myArray);
+var sortedArray = quickSort(myArray);
+console.log("Sorted array: " + sortedArray);
+
+
