@@ -69,6 +69,7 @@ console.log(arr1)
 //Find common value in array
 var ar1= [1, 5, 10, 20, 40, 80]
 var ar2 = [6, 7, 20, 80, 100]
+var ar3 = [3, 4, 15, 20, 30, 70, 80, 120]
 var last =[]
 var final=[]
 for(let i=0;i<ar1.length;i++){
@@ -77,8 +78,10 @@ for(let i=0;i<ar1.length;i++){
   }
 }
 for(let k=0;k<ar3.length;k++){
+ if(last.includes(ar3[k])){
    final.push(ar3[k])
  }
+console.log(final);
 
 
 
