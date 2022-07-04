@@ -52,15 +52,20 @@ console.log("min value - ", min)
 
 
 //Find duplicate in array
-let arr=[4,1,2,3,4,1,2,1]
-let arr1=[]
+var arr= [1,3,1,5,7,3,1];
+var arr2=[]
 for(let i=0;i<arr.length;i++){
-   if(arr1.indexOf(arr[i])===-1){
-     arr1.push(arr[i])
-   }
-  
+for(let j=i+1;j<arr.length;j++){
+if(arr[i]===arr[j]){
+arr2.push(arr[i])
+
 }
-console.log(arr1)
+}
+
+}
+uniq = [...new Set(arr2)];
+
+console.log(uniq)
 
 
 
