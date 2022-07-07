@@ -116,3 +116,17 @@ var sortedArray = quickSort(myArray);
 console.log("Sorted array: " + sortedArray);
 
 
+
+// The maximum difference between any two elements such that larger element appears after the smaller number. 
+function maxDiff( arr)
+{     
+  let diff ;
+  for (let i = 0; i < arr.length; i++){
+    for (let j = i+1; j < arr.length; j++){
+      if (arr[j] < arr[i]) 
+        diff = arr[i];
+    } 
+  }         
+  return diff;
+} 
+console.log( maxDiff( [2, 3, 10, 6, 4, 1, 100,147,1,90,8]));
