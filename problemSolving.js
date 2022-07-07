@@ -130,3 +130,22 @@ function maxDiff( arr)
   return diff;
 } 
 console.log( maxDiff( [2, 3, 10, 6, 4, 1, 100,147,1,90,8]));
+    
+   
+//Check if the given two sets are disjoint or not
+  function aredisjoint(set1,set2)
+    {
+        for (let i = 0; i < set1.length; i++) {
+            for (let j = 0; j < set2.length; j++){
+                if (set1[i] == set2[j])
+                    return false;
+            }
+        }
+        return true;
+    }
+       
+    result = aredisjoint([12, 34, 11, 9, 3], [7, 2, 1, 5]);
+    if (result)
+       console.log("Yes");
+    else
+        console.log("No");
