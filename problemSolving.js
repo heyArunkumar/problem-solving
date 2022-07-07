@@ -133,11 +133,11 @@ console.log( maxDiff( [2, 3, 10, 6, 4, 1, 100,147,1,90,8]));
     
    
 //Check if the given two sets are disjoint or not
-  function aredisjoint(set1,set2)
+  function aredisjoint(arr1,arr2)
     {
-        for (let i = 0; i < set1.length; i++) {
-            for (let j = 0; j < set2.length; j++){
-                if (set1[i] == set2[j])
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++){
+                if (arr1[i] == arr2[j])
                     return false;
             }
         }
