@@ -149,3 +149,25 @@ console.log( maxDiff( [2, 3, 10, 6, 4, 1, 100,147,1,90,8]));
        console.log("Yes");
     else
         console.log("No");
+
+    
+    //sum of digits in all numbers from 1 to n 
+      function sumOfDigit(n)
+    {
+        let result = 0;
+        for (let x = 1; x <= n; x++)
+            result += sumOfDigits(x);
+        return result;
+    }
+      
+    function sumOfDigits(x)
+    {
+        let sum = 0;
+        while (x != 0)
+        {
+            sum += x % 10;
+            x = parseInt(x / 10, 10);
+        }
+        return sum;
+    }
+    console.log(sumOfDigit(5));
